@@ -22,8 +22,12 @@ public class CreditCardTest {
 
     @BeforeEach
     void setUp() {
-        ChromeOptions option = new ChromeOptions();
-        driver = new ChromeDriver(option);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
+
     }
 
     @AfterEach
