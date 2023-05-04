@@ -16,8 +16,8 @@ public class CreditCardTest {
     private WebDriver driver;
 
     @BeforeAll
-    static void setUpAll() {
-        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+    static void setupAll() {
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
